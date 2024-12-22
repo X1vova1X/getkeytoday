@@ -1,9 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
 // Middleware to parse JSON
 app.use(express.json());
+
+// Add cors for every website
+app.use(cors());
 
 app.get('/getkey', (req, res) => {
     // Get the current date
